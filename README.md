@@ -8,4 +8,4 @@ Topics include: <br />
 Note: due to current limited stack size, some work arounds were made and current development to expand stack is underway. 
 
 <br />
-On top of that, a process to evaluate finite sets  under an operation (mainly addition and multiplication as of right now) to determine whether the set is a group. 
+On top of that, a process to evaluate finite sets  under an operation (mainly addition and multiplication as of right now) to determine whether the set is a group is being work on. So far, closure and inverse have been developed. 
