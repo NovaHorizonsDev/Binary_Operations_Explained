@@ -22,23 +22,46 @@ public class QuadraticResidue {
                     }
                 }
                 // summing lists
-                int sumOfA = A.stream().mapToInt(Integer::intValue).sum();
-                int sumOfB = B.stream().mapToInt(Integer::intValue).sum();
+        int sumOfA = A.stream().mapToInt(Integer::intValue).sum();
+        int sumOfB = B.stream().mapToInt(Integer::intValue).sum();
 
-                //printing results for each modulo prime
-                System.out.printf("\n\n Modulo %d\n", num);
-                System.out.println("Quadratic Residues(A):");
-                A.forEach(integer -> System.out.printf(" %d ",integer));
-                System.out.println("\n Non-Residue(B):");
-                B.forEach(integer -> System.out.printf(" %d ",integer));
+        //printing results for each modulo prime
+        System.out.printf("\n\n Modulo %d\n", num);
+        System.out.println("Quadratic Residues(A):");
+        A.forEach(integer -> System.out.printf(" %d ",integer));
+        System.out.println("\n Non-Residue(B):");
+        B.forEach(integer -> System.out.printf(" %d ",integer));
 
-                System.out.printf("\nA total : %d, B total: %d\n", sumOfA, sumOfB);
-                if(sumOfA == sumOfB)
-                    System.out.println(" A=B");
-                else if (sumOfA > sumOfB) System.out.println(" A>B");
-                else System.out.println(" A<B");
-
-
-
+        System.out.printf("\nA total : %d, B total: %d\n", sumOfA, sumOfB);
+        if(sumOfA == sumOfB)
+            System.out.println(" A=B");
+        else if (sumOfA > sumOfB) System.out.println(" A>B");
+        else System.out.println(" A<B");
         }
+
+        public void justQRs(int num){
+            ArrayList<Integer> A = new ArrayList<>();
+            int x = 1;
+            while(x<= num-1){
+                if(Math.floorMod((x*x),num)!=0 && !A.contains(Math.floorMod((x*x),num)) )
+                    A.add(Math.floorMod((x*x),num));
+                x++;
+            }
+            System.out.println("Quadratic Residues(A):");
+            A.forEach(integer -> System.out.printf(" %d ",integer));
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
