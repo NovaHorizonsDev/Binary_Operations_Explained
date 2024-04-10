@@ -4,31 +4,7 @@ public class Main {
     static QuadraticResidue QR= new QuadraticResidue();
     public static void main(String[] args) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+QR.justQRs(17);
 
 
 

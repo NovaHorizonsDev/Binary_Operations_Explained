@@ -47,6 +47,7 @@ public class QuadraticResidue {
                     A.add(Math.floorMod((x*x),num));
                 x++;
             }
+            System.out.printf("\n\n Modulo %d\n", num);
             System.out.println("Quadratic Residues(A):");
             A.forEach(integer -> System.out.printf(" %d ",integer));
         }
