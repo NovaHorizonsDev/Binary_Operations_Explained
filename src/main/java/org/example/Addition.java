@@ -15,6 +15,7 @@ public class Addition{
             return add(a-1,b);}
     }
 
+    
     public double additiveInverse(double a){
         return add(a,-add(a,a));
     }
